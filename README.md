@@ -10,6 +10,7 @@ Get up and running with react in no time.
 - ES6 support
 - Enzyme with Mocha for Testing
 - Chai as assertion Library
+- Test Coverage using IstanbulJS
 
 ### Scripts
 | Name | Description |
