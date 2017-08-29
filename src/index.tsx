@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import Hello from "./Hello";
-import { AppContainer } from "react-hot-loader";
+import Time from "./Time";
+// import { AppContainer } from "react-hot-loader";
 
-declare var module:any;
+// declare var module:any;
 
 ReactDOM.render(
-  <Hello name="GOT" />,
+  <Time name="GOT" />,
   document.getElementById("root")
 );
 

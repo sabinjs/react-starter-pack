@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
-//import config from '../webpack.config.babel';
 import config from '../webpack.dev';
 
 
