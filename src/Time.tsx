@@ -15,7 +15,6 @@ class Time extends React.Component<TimeProps, TimeState> {
     this.state = {"time": new Date()};
   }
 
-
   currentDate = () => {
     this.setState({
       time: new Date()
@@ -24,7 +23,7 @@ class Time extends React.Component<TimeProps, TimeState> {
 
   render() {
     return (
-      <div>
+      <div className = "timer">
         Time: {this.state.time.toLocaleTimeString()} NPT
         <div>
           <button onClick={this.currentDate}>Show Current Time</button>

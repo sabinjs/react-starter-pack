@@ -1,14 +1,22 @@
 import webpack from 'webpack';  
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import path from 'path';
 
 module.exports = {
  //devtool:'source-map',
- devtool: 'cheap-module-source-map',
- entry: [
-   'webpack-dev-server/client?http://localhost:4040',
-   'webpack/hot/only-dev-server',
-   './src/index.tsx'
-   ],
+  devtool: 'cheap-module-source-map',
+  entry: [
+    'webpack-dev-server/client?http://localhost:4040',
+    'webpack/hot/only-dev-server',
+    './src/index.tsx'
+  ],
+
+  externals: {
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true,
+    'react-addons-test-utils': 'react-dom',
+  },
 
 /*
 * The combination of path and filename tells Webpack what name to give to
@@ -74,6 +82,10 @@ resolve: {
       'process.env': {
           NODE_ENV: JSON.stringify('development')
       }
-  })
+    }),
+    new CopyWebpackPlugin([{
+      from: 'src/index.html',
+      to: './'
+    }])
   ]
 };

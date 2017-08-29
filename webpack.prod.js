@@ -1,5 +1,6 @@
 import webpack from 'webpack';  
 import path from 'path';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 module.exports = {
  //devtool:'source-map',
@@ -8,12 +9,19 @@ module.exports = {
    './src/index.tsx'
  ],
 
+externals: {
+  'react/addons': true,
+  'react/lib/ExecutionEnvironment': true,
+  'react/lib/ReactContext': true,
+  'react-addons-test-utils': 'react-dom',
+},
+
 /*
 * The combination of path and filename tells Webpack what name to give to
 * the final bundled JavaScript file and where to store this file.
 */
  output: {
-   path: __dirname + "/build",
+   path: __dirname + "/dist",
    filename: "bundle.js"
  },
 
@@ -51,9 +59,9 @@ resolve: {
     {
       test: /\.tsx?$/,
       loaders: ['react-hot-loader', 'babel-loader', 'ts-loader'],
-      include: path.resolve('src')
+      include: path.resolve('src'),
       //loader: "ts-loader",
-      //exclude: /node_modules/
+      exclude: /node_modules/
     },
     // {
     //   test: /\.js$/,
@@ -73,5 +81,9 @@ resolve: {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
+    new CopyWebpackPlugin([{
+      from: 'src/index.html',
+      to: './'
+    }])
   ]
 };
