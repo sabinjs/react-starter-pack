@@ -12,7 +12,9 @@
   "author": "Sabin Bir Bajracharya",
   "license": "MIT",
   "nyc": {
-    "include": ["**/src"]
+    "include": [
+      "**/src"
+    ]
   },
   "dependencies": {
     "react": "^15.6.1",
@@ -40,7 +42,6 @@
     "react-test-renderer": "^15.6.1",
     "style-loader": "^0.18.2",
     "ts-loader": "^2.3.3",
-    "ts-node": "^3.3.0",
     "typescript": "^2.4.2",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
