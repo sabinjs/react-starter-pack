@@ -25,7 +25,7 @@ Get up and running with react in no time.
 - ```$ npm run start:dev```
 - Visit your app at http://localhost:4040.
 
-### Using proxy for api (when api is in differnt URL to prevent CORS)
+### Using proxy for api (when api is in different URL to prevent CORS)
 - Put your api starting with "/api/"
 - The webpack server will redirect to http://localhost:3030/api/ instead of http://localhost:4040/api/
 - `To change the port and namespace look at tools/server.js`
