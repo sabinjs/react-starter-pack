@@ -7,7 +7,7 @@ reset=`tput sgr0`
 
 printf "${green}Performing cleanup\n\n${reset}"
 rm -rf .ts-build/*
-printf "${yellow}Cleanup commpleted\n\n${reset}"
+printf "${yellow}Cleanup completed\n\n${reset}"
 
 printf "${green}Transpiling typescript to ES6\n\n${reset}"
 tsc
@@ -18,4 +18,4 @@ babel .ts-build/ --out-dir .ts-build/
 printf "\n${yellow}Transpile to ES5 completed\n\n${reset}"
 
 printf "\n${green}Running test\n${reset}\n"
-nyc --reporter=html --reporter=text mocha .ts-build/tests
+nyc --cache --reporter=html --reporter=text mocha .ts-build/tests --require .ts-build/tests/dom.js --recursive

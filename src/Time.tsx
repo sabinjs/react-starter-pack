@@ -15,6 +15,10 @@ class Time extends React.Component<TimeProps, TimeState> {
     this.state = {"time": new Date()};
   }
 
+  componentDidMount() {
+    
+  }
+
   currentDate = () => {
     this.setState({
       time: new Date()
