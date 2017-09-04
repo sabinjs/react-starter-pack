@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import { expect } from 'chai';
 import { mount, shallow } from 'enzyme';
-import Time from "../../src/Time";
+import Time from "../../src/component/Time";
 
 describe('<Time />', () => {
   //Shallow rendering Test

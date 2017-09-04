@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import Time from "./Time";
+import Time from "./component/Time";
 // import { AppContainer } from "react-hot-loader";
 
 // declare var module:any;
