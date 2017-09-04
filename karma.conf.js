@@ -3,7 +3,7 @@
 var path = require('path');
 var webpack = require('webpack');
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -16,7 +16,7 @@ module.exports = function(config) {
     client: {
       mocha: {
         // change Karma's debug.html to the mocha web reporter
-        reporter: 'html'//View debug.html --> http://localhost:9876/debug.html 
+        reporter: 'html' //View debug.html --> http://localhost:9876/debug.html 
       }
     },
 
@@ -46,15 +46,15 @@ module.exports = function(config) {
 
     webpack: { //kind of a copy of your webpack config
 
-    externals: {
-      'react/addons': true,
-      'react/lib/ReactContext': true,
-      'react/lib/ExecutionEnvironment': true
-    },
+      externals: {
+        'react/addons': true,
+        'react/lib/ReactContext': true,
+        'react/lib/ExecutionEnvironment': true
+      },
 
 
       resolve: {
-        extensions: [".ts",".tsx", ".js"]
+        extensions: [".ts", ".tsx", ".js"]
       },
 
       devtool: 'inline-source-map', //just do inline source maps instead of the default
@@ -62,7 +62,7 @@ module.exports = function(config) {
         loaders: [{
           test: /\.tsx?$/,
           loaders: ['babel-loader', 'ts-loader'],
-          include: [ path.resolve('src'), path.resolve('tests'), ]
+          include: [path.resolve('src'), path.resolve('tests'), ]
         }]
       }
     },
@@ -106,8 +106,8 @@ module.exports = function(config) {
 
     coverageReporter: {
       //outputFile: 'tests/result.html'
-      type : 'html',
-      dir : 'karma-coverage/'
+      type: 'html',
+      dir: 'karma-coverage/'
     },
 
     webpackMiddleware: {
