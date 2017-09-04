@@ -11,7 +11,7 @@ Get up and running with react in no time.
 - Enzyme with Mocha for Testing
 - Chai as assertion Library
 - Test Coverage using IstanbulJS
-- Add Karma Test runner - To run test in real broswer
+- Karma Test runner - To run test in real broswer
 
 ### Scripts
 | Name | Description |
